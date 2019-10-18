@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import CharacterCard from './CharacterCard'
 import SearchForm from './SearchForm'
+
 export default function CharacterList() {
   const [peoples, setPeoples] = useState([])
   const [query, setQuery] = useState("");
@@ -32,7 +33,7 @@ export default function CharacterList() {
   return (
     <div className='list'>
       <SearchForm handleInputChange={handleInputChange} query={query} />
-      <section className="character-list">
+      <section className='character-list'>
         {peoples.map((people, index) => {
           return(
             <CharacterCard key={index} name={people.name} img={people.image} />

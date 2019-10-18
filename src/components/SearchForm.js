@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 
 export default function SearchForm(props) {
   
@@ -7,7 +6,6 @@ export default function SearchForm(props) {
     <section className="search-form">
      <form className="search" >
         <input
-          
           type='text'
           onChange={props.handleInputChange}
           value={props.query}
