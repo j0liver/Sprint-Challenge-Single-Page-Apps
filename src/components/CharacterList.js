@@ -30,13 +30,15 @@ export default function CharacterList() {
   };
 
   return (
-    <section className="character-list">
+    <div className='list'>
       <SearchForm handleInputChange={handleInputChange} query={query} />
-      {peoples.map((people, index) => {
-        return(
-          <CharacterCard key={index} name={people.name} img={people.image} />
-        )
-      })}
-    </section>
+      <section className="character-list">
+        {peoples.map((people, index) => {
+          return(
+            <CharacterCard key={index} name={people.name} img={people.image} />
+          )
+        })}
+      </section>
+    </div>
   );
 }
